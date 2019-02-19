@@ -1,0 +1,13 @@
+{
+  "defaultSeverity": "error",
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "extends": ["tslint-config-standard", "tslint-config-airbnb", "tslint-config-prettier"],
+  "rules": {
+    "prettier": true,
+    "max-classes-per-file": false,
+    "no-floating-promises": false
+  },
+  "linterOptions": {
+    "exclude": ["./node_modules", "./dist/**/*"]
+  }
+}

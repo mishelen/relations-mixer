@@ -1,0 +1,66 @@
+{
+  "name": "relations-mixer",
+  "version": "0.0.1",
+  "description": "Tool for handy creating seeds mutatations with relations between entities",
+  "keywords": [
+    "mixer",
+    "relations",
+    "one-to-many",
+    "many-to-many",
+    "mutations",
+    "seeds",
+    "entities"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*\\.js",
+    "dist/*\\.d.ts",
+    "dist/index.d.ts"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc -p tsconfig.release.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run tslint && npm test",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "test": "jest --config jest.config.json",
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "tslint:fix": "npm run tslint -- --fix",
+    "tslint:check-compatibility": "tslint-config-prettier-check ./tslint.json",
+    "clean": "rimraf coverage dist"
+  },
+  "dependencies": {
+    "chance": "^1.0.18"
+  },
+  "devDependencies": {
+    "@types/chance": "^1.0.1",
+    "@types/jest": "^23.3.13",
+    "codecov": "^3.2.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.16.4",
+    "rimraf": "~2.6.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "~3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishelen/relations-mixer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mishelen/relations-mixer/issues"
+  },
+  "homepage": "https://github.com/mishelen/relations-mixer#readme",
+  "author": "Mikhail Hozhy",
+  "license": "ISC"
+}

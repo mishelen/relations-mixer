@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "dist",
+    "module": "commonjs",
+    "lib": ["es5", "es6"],
+    "moduleResolution": "node",
+    "target": "es5",
+    "removeComments": false,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "diagnostics": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
