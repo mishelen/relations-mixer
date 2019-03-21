@@ -23,7 +23,7 @@
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.json",
     "prepublishOnly": "npm run tslint && npm test",
-    "preversion": "npm run lint",
+    "preversion": "npm run tslint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "test": "jest --config jest.config.json",
